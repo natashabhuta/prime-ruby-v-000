@@ -1,15 +1,14 @@
 # Add  code here!
 
-
-def prime?(num)
-
-  (2...num).each do |i|
-    return false if num % i == 0
+prime?(number)
+  start = 2
+  if number > 1
+    range = (start..number-1).to_a
+    range.none? do |num_to_test| 
+                                
+      number % num_to_test == 0
     end
-    return true
-  
-
-  prime_numbers = []
-  prime_numbers << num
-
+  else
+    false
+  end
 end
