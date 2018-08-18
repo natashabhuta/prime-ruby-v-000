@@ -1,7 +1,15 @@
 # Add  code here!
 
 
-def prime?(integer)
- test_divisors = (2..(integer - 1)).to_a
-  (test_divisors.any? {|divisor| integer % divisor == 0 || integer == 0 || integer == 1}) ? false : true
+def prime?(num)
+
+  (2...num).each do |i|
+    return false if num % i == 0
+    end
+    return true
+  
+
+  prime_numbers = []
+  prime_numbers << num
+
 end
